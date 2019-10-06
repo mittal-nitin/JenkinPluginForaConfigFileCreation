@@ -1,0 +1,7 @@
+<?jelly escape-by-default='true'?>
+<!--
+  Copyright
+-->
+<div>
+  This plugin can be used to generate a test run setting file.
+</div>

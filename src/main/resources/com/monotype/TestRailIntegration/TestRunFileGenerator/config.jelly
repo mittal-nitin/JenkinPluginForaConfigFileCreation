@@ -1,0 +1,25 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<j:set var="buildenv" value="${build.getEnvironment(listener)}"/>
+<f:entry title="Test Run Property File Complete Path" field="testRunPropertyFilePath"> <f:textbox/></f:entry>
+<f:entry title="TestRail Test Run Name" field="testRailTestRunName"><f:textbox/></f:entry>
+<f:entry title="TestRail Project Id" field="testRailProjectId"><f:textbox/></f:entry>
+<f:entry title="Link Cases By" field="linkCasesBy"><f:textbox/></f:entry>
+<f:entry title="TestRail Suite Id" field="testRailSuiteId"><f:textbox/></f:entry>
+<f:entry title="Do you want to save your results to TestRail ?" field="isSaveToTestRail"><f:textbox/></f:entry>
+<f:entry name="isFinalAttempt" title="Is Final Attempt" field="isFinalAttempt">
+    <select name="isFinalAttempt">
+        <f:option  value="Yes" selected="${instance.isFinalAttempt =='Yes'}">Yes</f:option>
+        <f:option  value="No" selected="${instance.isFinalAttempt =='No'}">No</f:option>
+    </select>
+</f:entry>
+<f:entry title="Result Email Recipients" field="resultEmailRecipient"><f:textbox/></f:entry>
+<f:entry name="isReRun" title="Re-Run" field="isReRun">
+    <select name="isReRun">
+        <f:option  value="Yes" selected="${instance.isReRun =='Yes'}">Yes</f:option>
+        <f:option  value="No" selected="${instance.isReRun =='No'}">No</f:option>
+    </select>
+</f:entry>
+<f:entry title="TestRail Run Details File path " field="testRailRunDetailsFile"><f:textbox/></f:entry>
+<f:entry title="Retry Count No" field="retryCountNo"><f:textbox/></f:entry>
+</j:jelly>
